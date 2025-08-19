@@ -21,3 +21,10 @@ resource "azurerm_resource_group" "name" {
     owner = "Amir"
   }
 }
+
+resource "azurerm_virtual_network" "example" {
+  name                = "terra-rg-network1"
+  resource_group_name = "terra-rg"
+  location            = "eastus"
+  address_space       = ["10.0.0.0/16"]
+}
